@@ -1,0 +1,34 @@
+.Recent {
+  background-color: rgb(10, 11, 24);
+  width: 100vw;
+  height: 100vh;
+}
+
+.Recent-notice-container {
+  position: relative;
+  padding-top: 2rem;
+  background-color: #20202a;
+  border-radius: 5px;
+  top: 25%;
+  left: 7%;
+  height: 70vh;
+  margin-left: 54.5px;
+  width: 80%;
+  overflow-y: scroll;
+}
+
+.Recent-notice-header {
+  padding: 0 3rem 2rem;
+  margin-bottom: 1rem;
+  font-size: 1.6rem;
+  color: rgb(212, 212, 212);
+  border-bottom: #161722 1px solid;
+  border-width: 50%;
+}
+
+@media (max-width: 572px) {
+  .Recent-notice-container {
+    margin: auto;
+    left: 0;
+  }
+}

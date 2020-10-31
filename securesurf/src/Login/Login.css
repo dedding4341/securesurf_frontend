@@ -1,0 +1,20 @@
+.Login {
+  display: flex;
+  flex-direction: column;
+  width: 40rem;
+  margin: auto;
+  margin-top: 20rem;
+}
+
+.Login-title {
+  font-size: 1.3rem;
+}
+
+.Login-title > h1 {
+  margin-bottom: 0.5rem;
+}
+
+.Login-install-ext {
+  color: rgb(47, 96, 255);
+  cursor: pointer;
+}

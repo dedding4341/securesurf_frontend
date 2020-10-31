@@ -1,0 +1,46 @@
+.SignUpForm-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.SignUpForm-pwd-tip {
+  margin:0.5rem 0 0.2rem 0;
+}
+
+.SignUpForm-pwd-match-err {
+  color: rgb(212, 45, 45);
+}
+
+.SignUpForm-form > input {
+  margin-top: 1rem;
+  padding: 0.8rem 1.6rem;
+}
+
+#SignUpForm-pwd-field {
+  margin-top: 0;
+}
+
+.SignUpForm-form > button {
+  margin: auto;
+  margin-top: 1rem;
+  padding: 1.2rem 0rem;
+  width: 20rem;
+  border-radius: 10px;
+  font-size: 1.6rem;
+  color: white;
+  font-weight: 600;
+  background-color: rgb(56, 222, 252);
+}
+
+
+.SignUpForm-form > button:disabled { 
+  filter: brightness(80%);
+}
+
+.SignUpForm-errors {
+  background-color: rgb(255, 93, 93);
+  margin-top: 3px;
+  border-radius: 5px;
+  color: white;
+  padding: 0.5rem 1.3rem;
+}
