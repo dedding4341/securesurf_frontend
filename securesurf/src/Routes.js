@@ -6,6 +6,8 @@ import NavBar from "./NavBar";
 import SideNav from "./SideNav";
 import Analytics from "./Analytics";
 import Recent from "./Recent";
+import Account from "./Account";
+import Settings from "./Settings";
 
 function Routes() {
   return (
@@ -15,6 +17,12 @@ function Routes() {
       </Route>
       <Route exact path="/dashboard/analytics">
         <Analytics />
+      </Route>
+      <Route exact path="/dashboard/account">
+        <Account />
+      </Route>
+      <Route exact path="/dashboard/settings">
+        <Settings />
       </Route>
       <Route exact path="/login">
         <NavBar />

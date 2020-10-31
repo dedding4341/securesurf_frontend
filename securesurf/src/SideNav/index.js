@@ -28,9 +28,9 @@ function SideNav() {
               </a>
             </li>
             <li>
-              <a href="/dashboard/setting" className="sidebar__nav__link">
+              <a href="/dashboard/settings" className="sidebar__nav__link">
                 <FontAwesomeIcon icon={faCog} size="3x" />
-                <span className="sidebar__nav__text">Setting</span>
+                <span className="sidebar__nav__text">Settings</span>
               </a>
             </li>
             <li>

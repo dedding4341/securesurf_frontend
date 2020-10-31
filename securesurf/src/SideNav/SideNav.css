@@ -2,7 +2,6 @@
 	background-color: rgb(44, 44, 52);
 	z-index: 99;
 	position: fixed;
-	transition: width 0.2s ease;
 }
 
 .sidebar nav {
@@ -76,7 +75,8 @@
 	.sidebar {
 		height: 100vh;
 		left: 0;
-		width: var(--sidebar-width);
+		width: 5.3rem;
+		transition: 0.2s;
 	}
 
 	.sidebar:hover {

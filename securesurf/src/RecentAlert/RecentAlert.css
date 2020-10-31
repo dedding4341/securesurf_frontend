@@ -1,14 +1,36 @@
-.RecentAlert {
+.RecentAlert-main, .RecentAlert-details {
   background-color: rgb(48, 48, 49);
-  width: 60rem;
+  width: 85%;
+  max-width: 80rem;
   color: rgb(223, 223, 223);
   padding: 1rem 2rem;
   border-radius: 10px;
   margin: auto;
+  margin-top: 0.5rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
   box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+}
+
+.RecentAlert-details {
+  width: 55rem;
+  display: block;
+  background-color: rgb(69, 66, 75);
+  box-shadow: none;
+  top: 3rem;
+}
+
+.RecentAlert-details-header {
+  color: rgb(212, 212, 212);
+  border-bottom: rgb(50, 46, 58) 1px solid;
+  padding-bottom: 2px;
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.RecentAlert-details-text {
+  font-size: 1.3rem;
 }
 
 .RecentAlert-text {
@@ -30,3 +52,4 @@
   color: rgb(48, 82, 50);
   transition: 0.3s ease;
 }
+
