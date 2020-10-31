@@ -2,4 +2,24 @@
   background-color: rgb(10, 11, 24);
   width: 100vw;
   height: 100vh;
+  color: white;
+}
+
+.Analytics-filter {
+  position: absolute;
+  top: 0;
+}
+
+.Analytics-bar-container {
+  min-width: 70rem;
+  height: 60%;
+  min-height: 50rem;
+  width: 50%;
+  max-width: 6%;
+  margin-left: 100px;
+  background-color: #363636;
+}
+
+.tick .text {
+  transform: rotate(-90deg);
 }

@@ -8,7 +8,7 @@ function SideNav() {
   const history = useHistory();
 
   const handleLogout = (evt) => {
-    localStorage.removeItem("token");
+    localStorage.clear();
     history.push("/");
   }
 

@@ -26,6 +26,15 @@
   border-width: 50%;
 }
 
+.Recent-no-recents {
+  color: rgb(212, 212, 212);
+  text-align: center;
+  font-weight: 600;
+  padding: 2rem;
+  font-size: 1.4rem;
+  
+}
+
 @media (max-width: 572px) {
   .Recent-notice-container {
     margin: auto;

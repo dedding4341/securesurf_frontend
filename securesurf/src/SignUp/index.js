@@ -18,6 +18,7 @@ function SignUp() {
     } else {
       // results.data is a jwt.
       localStorage.setItem("token", results.data);
+      localStorage.setItem("user_email", data.user_email);
       history.push("/dashboard/recent");
     }
   }
