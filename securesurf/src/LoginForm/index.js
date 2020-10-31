@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./LoginForm.css";
 
 function LoginForm() {
-  const INITIAL_VALUES = { email: "", password: "" }
+  const INITIAL_VALUES = { user_email: "", password: "" }
   const [formData, setFormData] = useState(INITIAL_VALUES);
 
   const handleChange = (evt) => {
@@ -16,7 +16,7 @@ function LoginForm() {
 
   return (
     <form className="LoginForm" onSubmit={handleSubmit}>
-      <input placeholder="Email" name="email" value={formData.email} onChange={handleChange} />
+      <input placeholder="Email" name="user_email" value={formData.email} onChange={handleChange} />
       <input placeholder="Password" type="password" name="password" value={formData.password} onChange={handleChange} />
       <button type="submit">LOGIN</button>
     </form>

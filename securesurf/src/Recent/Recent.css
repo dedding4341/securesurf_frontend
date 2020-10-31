@@ -1,0 +1,19 @@
+.Recent {
+  background-color: rgb(10, 11, 24);
+  width: 100vw;
+  height: 100vh;
+  font: white;
+}
+
+.Recent-notice-container {
+  position: relative;
+  padding-top: 2rem;
+  background-color: #20202a;
+  border-radius: 5px;
+  top: 25%;
+  left: 5%;
+  height: 70vh;
+  margin-left: 54.5px;
+  width: 85%;
+  overflow-y: scroll;
+}

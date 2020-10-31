@@ -1,10 +1,13 @@
 import React from "react";
 import "./Analytics.css";
+import BarGraph from "../BarGraph";
+import SideNav from "../SideNav";
 
 function Analytics() {
   return (
     <div className="Analytics">
-      analytics!
+      <SideNav />
+      <BarGraph />
     </div>
   );
 }

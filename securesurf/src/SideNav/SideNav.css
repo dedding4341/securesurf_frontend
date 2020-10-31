@@ -1,5 +1,6 @@
 .sidebar {
-	background-color: #333;
+	background-color: rgb(44, 44, 52);
+	z-index: 99;
 	position: fixed;
 	transition: width 0.2s ease;
 }
@@ -30,7 +31,7 @@
 }
 
 .sidebar .sidebar__nav .sidebar__nav__link:hover {
-	background-color: rgba(0, 0, 0, 0.15);
+	background-color: rgba(70, 56, 194, 0.13);
 	color: rgb(247, 247, 247);
 }
 
@@ -44,7 +45,7 @@
 .sidebar .sidebar__nav i {
 	align-items: center;
 	display: flex;
-	justify-content: center;
+  justify-content: center;
 }
 
 .sidebar_nav {
@@ -91,7 +92,7 @@
 	}
 
 	.sidebar .sidebar__nav .sidebar__nav__link {
-		padding: 5em 0em 1em 1em ;
+		padding: 5em 0.7em 1em 1em ;
 	}
 
 	.sidebar:hover .sidebar__nav .sidebar__nav__text {
