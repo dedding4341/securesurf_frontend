@@ -1,9 +1,17 @@
 import React from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faUserCog, faCog, faChartBar, faSignOutAlt, faClock, faUser } from '@fortawesome/free-solid-svg-icons'
+import { faUserCog, faCog, faChartBar, faSignOutAlt, faClock } from '@fortawesome/free-solid-svg-icons'
 import "./SideNav.css";
+import { useHistory } from "react-router-dom";
 
 function SideNav() {
+  const history = useHistory();
+
+  const handleLogout = (evt) => {
+    localStorage.removeItem("token");
+    history.push("/");
+  }
+
   return (
     <div className="SideNav">
       <aside className="sidebar">
@@ -34,10 +42,10 @@ function SideNav() {
               </a>
             </li>
             <li>
-              <a href="#" className="sidebar__nav__link">
+              <span onClick={handleLogout} className="sidebar__nav__link">
                 <FontAwesomeIcon icon={faSignOutAlt} size="3x" />
                 <span className="sidebar__nav__text">Logout</span>
-              </a>
+              </span>
             </li>
           </ul>
         </nav>

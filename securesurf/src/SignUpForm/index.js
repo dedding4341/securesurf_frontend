@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./SignUpForm.css";
 
-function SignUpForm() {
+function SignUpForm({ handleSignUp }) {
   const INITIAL_VALUES = { user_email: "", password: "", password2: "", first_name: "", phone: "" }
   const [formData, setFormData] = useState(INITIAL_VALUES);
   const [errors, setErrors] = useState({ errors: {} });
@@ -53,14 +53,11 @@ function SignUpForm() {
     setFormData(currData => ({ ...currData, [name]: value }));
   }
 
-
-
   const handleSubmit = (evt) => {
     evt.preventDefault();
     if (validate()) {
-      console.log(formData, "validated!");
+      handleSignUp(formData)
       setFormData(INITIAL_VALUES);
-      //post to backend
       console.log('Form is submited');
       //start download
     } else {
@@ -71,7 +68,7 @@ function SignUpForm() {
   return (
     <div className="SignUpForm">
       <section className="SignUpForm-errors-container">
-        {Object.keys(errors.errors).map(key => <p className="SignUpForm-errors">{errors.errors[key]}</p>)}
+        {Object.keys(errors.errors).map(key => <p className="error-notif">{errors.errors[key]}</p>)}
       </section>
       <form className="SignUpForm-form" onSubmit={handleSubmit}>
         <input placeholder="Email" type="email" name="user_email" value={formData.email} onChange={handleChange} required />
