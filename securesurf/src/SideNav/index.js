@@ -1,6 +1,6 @@
 import React from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faUserCog, faCog, faChartBar, faSignOutAlt, faClock, faUser } from '@fortawesome/free-solid-svg-icons'
+import { faUserCog, faCog, faChartBar, faSignOutAlt, faClock } from '@fortawesome/free-solid-svg-icons'
 import "./SideNav.css";
 
 function SideNav() {

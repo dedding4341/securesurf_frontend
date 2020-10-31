@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./LoginForm.css";
 
-function LoginForm() {
+function LoginForm({ handleLogin }) {
   const INITIAL_VALUES = { user_email: "", password: "" }
   const [formData, setFormData] = useState(INITIAL_VALUES);
 
@@ -12,12 +12,13 @@ function LoginForm() {
 
   const handleSubmit = (evt) => {
     evt.preventDefault();
+    handleLogin(formData);
   }
 
   return (
     <form className="LoginForm" onSubmit={handleSubmit}>
-      <input placeholder="Email" name="user_email" value={formData.email} onChange={handleChange} />
-      <input placeholder="Password" type="password" name="password" value={formData.password} onChange={handleChange} />
+      <input placeholder="Email" type="email" name="user_email" value={formData.email} onChange={handleChange} required />
+      <input placeholder="Password" type="password" name="password" value={formData.password} onChange={handleChange} required />
       <button type="submit">LOGIN</button>
     </form>
   );
