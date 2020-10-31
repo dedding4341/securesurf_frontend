@@ -3,11 +3,11 @@ import { Route, Switch } from "react-router-dom";
 import Homepage from "./Homepage";
 import Login from "./Login";
 import NavBar from "./NavBar";
-import SideNav from "./SideNav";
 import Analytics from "./Analytics";
 import Recent from "./Recent";
 import Account from "./Account";
 import Settings from "./Settings";
+import SignUp from "./SignUp";
 
 function Routes() {
   return (
@@ -27,6 +27,10 @@ function Routes() {
       <Route exact path="/login">
         <NavBar />
         <Login />
+      </Route>
+      <Route exact path="/signup">
+        <NavBar />
+        <SignUp />
       </Route>
       <Route>
         <NavBar />

@@ -1,0 +1,11 @@
+.SignUp {
+  width: 55%;
+  margin: auto;
+  margin-top: 20rem;
+  max-width: 65rem;
+  font-size: 1.3rem;
+}
+
+.SignUp-title {
+  margin-bottom: 0.5rem;
+}

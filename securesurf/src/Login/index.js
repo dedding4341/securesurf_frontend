@@ -7,7 +7,7 @@ function Login() {
     <div className="Login">
       <div className="Login-title">
         <h1>SecureSurf Login</h1>
-        <p>No account? Install <span className="Login-install-ext" onClick={() => console.log("Redirecting to install extension...")}>SecureSurf</span></p>
+        <p>No account? <a href="/signup">Sign Up</a></p>
       </div>
       <LoginForm />
     </div>
