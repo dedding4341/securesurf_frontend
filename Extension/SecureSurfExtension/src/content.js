@@ -4,26 +4,12 @@
 import React, {useState, useEffect} from "react";
 import ReactDOM from "react-dom";
 import Frame, { FrameContextConsumer } from "react-frame-component";
-import Login from "./login/Login";
 import Popup from "./Popup";
 import "./content.css";
 
 const Main = () => {
-  const [loggedIn, setLoggedIn] = useState(false);
 
-  let loginToggle = () => {
-    return (loggedIn == true ? <Popup/> : <Login/> )
-  }
-
-  useEffect(() => {
-    let token = localStorage.getItem("token");
-
-    if(token === null) {
-      setLoggedIn(false)
-    } else {
-      setLoggedIn(true)
-    }
-  },[loggedIn])
+  
   return (
     <Frame
       head={[
@@ -34,6 +20,7 @@ const Main = () => {
         ></link>,
       ]}
     >
+      
       <FrameContextConsumer>
         {
           // Callback is invoked with iframe's window and document instances
@@ -41,8 +28,7 @@ const Main = () => {
             // Render Children
             return (
               <div className={"popup"}>
-                {loginToggle()}
-                <Login/>
+                  {<Popup/>}
               </div>
             );
           }
@@ -79,10 +65,13 @@ const data = {
   user_email: "email@email.com",
   url: website_url
 }
-
+let tabStartTime = 0;
+let tabEndTime = 0;
 
 let grabUrl = () => {
-  console.log(website_url)
+  tabStartTime = Date.now();
+  console.log(tabStartTime)
+  console.log(website_url);
 
   fetch(testSiteUrl, {
     method: 'POST',
@@ -95,16 +84,28 @@ let grabUrl = () => {
   })
   .then(res => res.json())
   .then(x => console.log(x))
+}
 
+let endTime = () => {
+  tabEndTime = Date.now();
+  console.log(tabEndTime)
+  let timeOnSite = tabEndTime - tabStartTime;
+  console.log(timeOnSite)
 
-
-  // axios.get(testSiteUrl, data)
-  // .then(function(response) {
-  //   console.log(response);
-  // })
-  // .catch(function(error) {
-  //     console.log(error);
-  // });
+  fetch('https://securesurf-backend.herokuapp.com/feed_data', {
+    method: "POSt",
+    body: JSON.stringify({
+      user_email: "email@email.com",
+      url: website_url,
+      time_ms: timeOnSite
+    }),
+    headers: {
+      "Content-type": "application/json;"
+    }
+  })
+  .then(res => res.json())
+  .then(json => console.log(json))
 }
 
 window.addEventListener('load', grabUrl);
+window.addEventListener('beforeunload', endTime)

@@ -1,6 +1,9 @@
-.my-extension {
+.popup {
   padding: 20px;
 }
-.my-extension h1 {
+.popup h1 {
   color: #000;
+}
+.popup body{
+  background-color: rgb(44, 44, 52);
 }
