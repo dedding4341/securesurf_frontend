@@ -4,11 +4,13 @@ import Homepage from "./Homepage";
 import UserDashboard from "./UserDashboard";
 import Login from "./Login";
 import NavBar from "./NavBar";
+import SideNav from "./SideNav";
 
 function Routes() {
   return (
     <Switch>
       <Route exact path="/dashboard">
+        <SideNav />
         <UserDashboard />
       </Route>
       <Route exact path="/login">
