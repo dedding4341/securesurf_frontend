@@ -1,0 +1,54 @@
+.Homepage {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 15rem;
+  margin-left: 10rem;
+}
+
+.Homepage-ssDemo-container {
+  width: 55rem;
+  margin-left: 5rem;
+}
+
+.Homepage-logo-container {
+  width: 40rem;
+}
+
+.Homepage-description {
+  font-size: 2rem;
+}
+
+.Homepage-d1 {
+  font-size: 1.6rem;
+  font-weight: 300;
+  margin: 0.8rem 0 2rem 0;
+}
+
+.Homepage-d2 {
+  margin-bottom: 2rem;
+  font-weight: 600;
+}
+
+.Homepage-d3 {
+  font-weight: 300;
+  margin-bottom: 5rem;
+}
+
+.Homepage-d4 {
+  font-size: 1.6rem;
+}
+
+.Homepage-description-container {
+  width: 35%;
+}
+
+.Homepage-install-btn {
+  margin: 2rem 0;
+  width: 15rem;
+  padding: 1.5rem 0;
+  font-size: 2rem;
+  border: none;
+  border-radius: 15px;
+  background-color: rgb(133, 213, 250);
+  color: white;
+}
