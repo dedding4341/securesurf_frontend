@@ -1,0 +1,17 @@
+import React from "react";
+import LoginForm from "../loginForm/LoginForm";
+import "./Login.css";
+
+function Login() {
+  return (
+    <div className="Login">
+      <div className="Login-title">
+        <h1>SecureSurf Login</h1>
+        <p>No account? <a href="/signup">Sign Up</a></p>
+      </div>
+      <LoginForm />
+    </div>
+  );
+}
+
+export default Login;
