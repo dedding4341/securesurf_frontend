@@ -1,0 +1,17 @@
+{
+    "name": "SecureSurf",
+    "version": "1.0",
+    "description": "CyberSecurity extension",
+    "content_scripts": [
+        {
+            "matches": ["<all_urls>"],
+            "js": [
+                "app.js"
+            ]
+        }
+    ],
+    "browser_action": {
+        
+    },
+    "manifest_version": 2
+}
