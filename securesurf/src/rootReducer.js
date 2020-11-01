@@ -1,12 +1,16 @@
-import { act } from "react-dom/test-utils";
 
-const DEFAULT_STATE = { recent: [], breach_watch_list: [], monthly_safe_danger: [0, 0], monthly_analytics_detailed: [], monthly_data_set: [], loading: true };
+const DEFAULT_STATE = { recent: [], watch_list: [], monthly_safe_danger: [0, 0], monthly_analytics_detailed: [], monthly_data_set: [], loading: true };
 
 function rootReducer(state = DEFAULT_STATE, action) {
   let breaches;
   switch (action.type) {
     case "LOAD_RECENT":
       return { ...state, recent: action.payload }
+    case "LOAD_WATCH_LIST": 
+      if (action.payload === null) {
+        return state;
+      }
+      return { ...state, watch_list: action.payload }
     case "LOAD_MONTHLY_SAFE_DANGER":
       console.log("monthly dangers...", action.payload);
       return { ...state, monthly_safe_danger: action.payload }

@@ -21,6 +21,24 @@ export const getRecentBreachesFromAPI = () => {
   };
 };
 
+export const getWatchListFromAPI = () => {
+  return async function (dispatch) {
+    try {
+      let url = `${BASE_URL}/get_breach_watch_list`;
+      let res = await axios({
+        method: 'post',
+        url,
+        data: {
+          user_email
+        }
+      });
+      dispatch(loadWatchList(res.data));
+    } catch (err) {
+      console.log("error!", err);
+    }
+  };
+}
+
 export const getMonthlyFromAPI = (month) => {
   return async function (dispatch) {
     try {
@@ -105,6 +123,13 @@ const loadMonthly = (aggData, detailData) => {
       aggData,
       detailData
     }
+  }
+}
+
+const loadWatchList = (data) => {
+  return {
+    type: t.LOAD_WATCH_LIST,
+    payload: data
   }
 }
 

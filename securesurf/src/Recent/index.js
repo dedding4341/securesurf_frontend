@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import "./Recent.css";
 import RecentAlert from "../RecentAlert";
 import SideNav from "../SideNav";

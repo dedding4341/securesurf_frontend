@@ -1,0 +1,23 @@
+.Table-table {
+  background-color: rgb(36, 35, 35);
+  margin: auto;
+  width: 60vw;
+  min-width: 48rem;
+  margin-top: 7rem;
+  color: rgb(212, 212, 212);
+  padding: 0 0.2rem;
+  text-align: center;
+}
+
+.Table {
+  display: flex;
+}
+
+.Table-table > tr > th {
+  background-color: rgb(16, 16, 20);
+  padding: 0.7rem;
+}
+
+.Table-table-body > tr > td {
+  border-bottom: 1px solid rgb(87, 87, 87);
+}
