@@ -27,14 +27,14 @@ function Settings() {
 
   const handleSubmit = (evt) => {
     evt.preventDefault();
-    let formDataList = Object.values(formData);
+    let formDataList = Object.values(formData).filter(v => v !== "");
     dispatch(a.postWatchListToAPI(formDataList));
     dispatch(a.getWatchListFromAPI());
     setFormData(INITIAL_VALUES);
+    setShowForm(false);
   }
 
   if (!localStorage.getItem("token")) {
-    console.log("no token..");
     return <Redirect to="/" />
   }
 

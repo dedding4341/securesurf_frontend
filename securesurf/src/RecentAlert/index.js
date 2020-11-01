@@ -17,7 +17,8 @@ function RecentAlert({ id, url, breach_date, details }) {
 
   const handleAcknlg = (evt) => {
     let email = localStorage.getItem("user_email");
-    dispatch(a.acknowledgeNotif(email, id));
+    dispatch(a.acknowledgeNotif(id));
+
   }
 
   return (

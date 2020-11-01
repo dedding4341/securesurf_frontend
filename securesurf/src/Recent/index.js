@@ -15,11 +15,10 @@ function Recent() {
   useEffect(() => {
     dispatch(a.getRecentBreachesFromAPI());
     dispatch(a.getMonthlyDangerCts());
-  }, [dispatch]);
+  }, []);
 
 
   if (!localStorage.getItem("token")) {
-    console.log("no token..");
     return <Redirect to="/" />
   }
 
@@ -38,7 +37,10 @@ function Recent() {
       </section>
       <section className="Recent-notice-container">
         <div className="Recent-notice-header">Recent</div>
-        {recents.length > 0 ? recents.map(breach => <RecentAlert key={breach.Name} id={breach.Name} url={breach.Domain} breach_date={breach.BreachDate} details={breach.Description} />)
+        {recents.length > 0 ? recents.map(breach => {
+          let description = breach.Description.replace(/(<([^>]+)>)/gi, "");
+          return <RecentAlert key={breach.Name} id={breach.Name} url={breach.Domain} breach_date={breach.BreachDate} details={`${description}`} />
+        })
           : <p className="Recent-no-recents">No recent breaches found.</p>}
       </section>
     </div>

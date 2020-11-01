@@ -2,15 +2,21 @@ import React, { useState } from "react";
 import LoginForm from "../LoginForm";
 import "./Login.css";
 import Axios from "axios";
-import { useHistory } from "react-router-dom";
+import { useHistory, Redirect } from "react-router-dom";
 
 function Login() {
   const [errors, setErrors] = useState({ errors: {} });
   const history = useHistory();
 
-  const loginUrl = "https://securesurf-backend.herokuapp.com/sign_in";
+  const loginUrl = `${process.env.REACT_APP_BASE_URL}/sign_in`;
+
+
+  if (localStorage.getItem("token")) {
+    return <Redirect to="/dashboard/recent" />
+  }
 
   const handleLogin = async (data) => {
+    localStorage.clear();
     let results = await Axios.post(loginUrl, data);
     if (results.data.ERROR) {
       setErrors({ errors: { login: results.data.ERROR } });

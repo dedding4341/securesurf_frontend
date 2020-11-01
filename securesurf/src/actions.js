@@ -1,7 +1,7 @@
 import * as t from "./actionTypes";
 import axios from "axios";
 
-const BASE_URL = "https://securesurf-backend.herokuapp.com";
+const BASE_URL = process.env.REACT_APP_BASE_URL;
 
 const user_email = localStorage.getItem("user_email");
 
@@ -43,7 +43,7 @@ export const postWatchListToAPI = (formData) => {
   return async function (dispatch) {
     try {
       let url = `${BASE_URL}/update_breach_watch_list`;
-      let res = await axios({
+      await axios({
         method: 'post',
         url,
         data: {
@@ -51,7 +51,7 @@ export const postWatchListToAPI = (formData) => {
           breach_watch_list: formData
         }
       });
-      dispatch(postWatchList(res.data));
+      dispatch(postWatchList(formData));
     } catch (err) {
       console.log("error!", err);
     }
@@ -171,7 +171,7 @@ const loadRecent = (data) => {
 const deleteRecent = (breach_name) => {
   return {
     type: t.ACKNOWLEDGE,
-    payload: { breach_name }
+    payload: breach_name
   }
 }
 const loadMonthlyDangerCts = (data) => {

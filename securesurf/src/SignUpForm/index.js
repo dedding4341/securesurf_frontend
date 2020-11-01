@@ -58,8 +58,7 @@ function SignUpForm({ handleSignUp }) {
     if (validate()) {
       handleSignUp(formData)
       setFormData(INITIAL_VALUES);
-      console.log('Form is submited');
-      //start download
+      //redirect to install...  (github)
     } else {
       console.log('validation failed', errors);
     }

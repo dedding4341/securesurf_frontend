@@ -2,8 +2,8 @@ import React from "react";
 import "./Table.css";
 
 function Table({ data }) {
-
-  console.log(data);
+  
+  console.log("Table...", data);
   return (
     <div className="Table">
       <table className="Table-table" >

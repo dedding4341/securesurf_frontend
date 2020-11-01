@@ -6,10 +6,12 @@ function rootReducer(state = DEFAULT_STATE, action) {
   switch (action.type) {
     case "LOAD_RECENT":
       return { ...state, recent: action.payload }
-    case "LOAD_WATCH_LIST": 
+    case "LOAD_WATCH_LIST":
       if (action.payload === null) {
         return state;
       }
+      return { ...state, watch_list: action.payload }
+    case "POST_WATCH_LIST":
       return { ...state, watch_list: action.payload }
     case "LOAD_MONTHLY_SAFE_DANGER":
       console.log("monthly dangers...", action.payload);
@@ -26,9 +28,8 @@ function rootReducer(state = DEFAULT_STATE, action) {
         return { ...state, monthly_analytics_detailed: detailDataset, monthly_data_set: [] }
       }
       return { ...state, monthly_analytics_detailed: detailDataset, monthly_data_set: [{ label: "Browsed", values: dataset }] }
-
     case "ACKNOWLEDGE":
-      breaches = state.recent.filter(breach => breach.Name !== action.payload.breach_name);
+      breaches = state.recent.filter(breach => breach.Name !== action.payload);
       return { ...state, recent: breaches }
     case "START_LOADING":
       return { ...state, loading: true }
