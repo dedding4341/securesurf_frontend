@@ -1,10 +1,10 @@
 # SecureSurf Frontend
 Frontend libraries include:
-> D3 / react-d3-components
-> Redux, Thunk / react-redux, redux-thunk
-> react-router-dom
-> Axios
-> FontAwesome / react-fontawesome
+- D3 / react-d3-components
+- Redux, Thunk / react-redux, redux-thunk
+- react-router-dom
+- Axios
+- FontAwesome / react-fontawesome
 
 
 # Getting Started with Create React App
