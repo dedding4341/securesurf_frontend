@@ -16,8 +16,6 @@ function Analytics() {
   const [month, setMonth] = useState(DEFAULT_MONTH);
   const dispatch = useDispatch();
 
-  console.log(monthlyAggDataSet);
-
   useEffect(() => {
     if (dataSet.length === 0) {
       getData();
