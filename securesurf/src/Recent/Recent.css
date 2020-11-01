@@ -11,7 +11,8 @@
   border-radius: 5px;
   top: 10%;
   left: 7%;
-  height: 70vh;
+  height: 30%;
+  min-height: 48rem;
   margin-left: 54.5px;
   width: 80%;
   overflow-y: scroll;

@@ -1,6 +1,6 @@
 import React from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faUserCog, faCog, faChartBar, faSignOutAlt, faClock } from '@fortawesome/free-solid-svg-icons'
+import { faUserCog, faGlasses , faChartBar, faSignOutAlt, faClock } from '@fortawesome/free-solid-svg-icons'
 import "./SideNav.css";
 import { useHistory } from "react-router-dom";
 
@@ -37,7 +37,7 @@ function SideNav() {
             </li>
             <li>
               <a href="/dashboard/settings" className="sidebar__nav__link">
-                <FontAwesomeIcon icon={faCog} size="3x" />
+                <FontAwesomeIcon icon={faGlasses} size="3x" />
                 <span className="sidebar__nav__text">Settings</span>
               </a>
             </li>

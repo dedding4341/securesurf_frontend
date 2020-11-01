@@ -7,12 +7,15 @@ function AnalyticDetailTable({ data }) {
 
   return (
     <div className="AnalyticDetailTable">
-      < table className="AnalyticDetailTable-table" >
-        <tr>
-          <th>URL</th>
-          <th>TIME ACCESSED</th>
-          <th>ACCESS IP</th>
-        </tr>
+      <table className="AnalyticDetailTable-table" >
+        <thead>
+          <tr>
+            <th>URL</th>
+            <th>TIME ACCESSED</th>
+            <th>ACCESS IP</th>
+          </tr>
+
+        </thead>
         <tbody className="AnalyticDetailTable-table-body">
           {data.map(d => {
             return (
@@ -24,7 +27,7 @@ function AnalyticDetailTable({ data }) {
             );
           })}
         </tbody>
-    </table >
+      </table >
     </div >
   );
 }

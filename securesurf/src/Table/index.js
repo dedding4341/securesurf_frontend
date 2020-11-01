@@ -7,9 +7,11 @@ function Table({ data }) {
   return (
     <div className="Table">
       <table className="Table-table" >
-        <tr>
-          <th>Watch List</th>
-        </tr>
+        <thead>
+          <tr>
+            <th>Site Data Breach Watch List</th>
+          </tr>
+        </thead>
         <tbody className="Table-table-body">
           {data.length !== 0
             ? data.map(d => {
