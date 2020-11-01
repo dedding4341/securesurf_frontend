@@ -1,0 +1,1 @@
+{"version":3,"sources":["Login.css","content.css"],"names":[],"mappings":"AAAA,KACI,wBACJ,CCFA,OACE,YACF,CACA,UACE,UACF,CACA,YACE,wBACF","file":"content.css","sourcesContent":["body{\n    background-color: rgb(44, 44, 52);\n}",".popup {\n  padding: 20px;\n}\n.popup h1 {\n  color: #000;\n}\n.popup body{\n  background-color: rgb(44, 44, 52);\n}\n"]}

@@ -1,0 +1,22 @@
+{
+  "files": {
+    "content.css": "/static/css/content.css",
+    "content.js": "/static/js/content.js",
+    "content.js.map": "/static/js/content.js.map",
+    "main.css": "/static/css/main.css",
+    "main.js": "/static/js/main.js",
+    "main.js.map": "/static/js/main.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.eed088eec1c7f4015233e06357523f9a.js": "/precache-manifest.eed088eec1c7f4015233e06357523f9a.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/content.css.map": "/static/css/content.css.map",
+    "static/css/main.css.map": "/static/css/main.css.map",
+    "static/js/content.js.LICENSE.txt": "/static/js/content.js.LICENSE.txt",
+    "static/js/main.js.LICENSE.txt": "/static/js/main.js.LICENSE.txt",
+    "static/media/logo.svg": "/static/media/logo.5d5d9eef.svg"
+  },
+  "entrypoints": [
+    "static/css/main.css",
+    "static/js/main.js"
+  ]
+}
