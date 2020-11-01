@@ -1,5 +1,5 @@
 # securesurf_frontend
-Hacktober 2020
+Hacktober 2020 -
 DEMO: https://securesurf.netlify.app/
 
 # Purpose
