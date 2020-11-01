@@ -14,8 +14,6 @@ function Account() {
     <div className="Account">
       <SideNav />
       <div className="Account-container">
-
-      
       </div>
     </div>
   );
