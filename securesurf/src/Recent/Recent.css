@@ -9,12 +9,28 @@
   padding-top: 2rem;
   background-color: #20202a;
   border-radius: 5px;
-  top: 25%;
+  top: 10%;
   left: 7%;
   height: 70vh;
   margin-left: 54.5px;
   width: 80%;
   overflow-y: scroll;
+}
+
+.Recent-safe-danger {
+  display: flex;
+  margin: auto;
+  color: white;
+  justify-content: space-around;
+  text-align: center;
+  width: 60%;
+  max-width: 60rem;
+  padding-top: 10rem;
+}
+
+.Recent-safe-danger p {
+  font-size: 2rem;
+  padding: 2rem;
 }
 
 .Recent-notice-header {

@@ -5,7 +5,6 @@ import * as a from "../actions";
 import { Redirect } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import BarChart from "react-d3-components/lib/BarChart";
-import { schemeCategory10 } from "d3";
 
 import AnalyticDetailTable from "../AnalyticDetailTable";
 
