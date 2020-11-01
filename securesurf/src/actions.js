@@ -21,24 +21,34 @@ export const getRecentBreachesFromAPI = () => {
   };
 };
 
-export const getMonthlyAggFromAPI = (month) => {
+export const getMonthlyFromAPI = (month) => {
   return async function (dispatch) {
     try {
-      let url = `${BASE_URL}/monthly_analytics_aggregated`;
-      let res = await axios({
+      let aggUrl = `${BASE_URL}/monthly_analytics_aggregated`;
+      let aggregatedRes = await axios({
         method: 'post',
-        url,
+        url: aggUrl,
         data: {
           user_email,
           month: month
         }
       });
-      dispatch(loadMonthlyAgg(res.data));
+      let detailUrl = `${BASE_URL}/monthly_analytics_detailed`;
+      let detailedRes = await axios({
+        method: 'post',
+        url:detailUrl,
+        data: {
+          user_email,
+          month: month
+        }
+      });
+      dispatch(loadMonthly(aggregatedRes.data, detailedRes.data));
     } catch (err) {
       console.log("error!", err);
     }
   };
 }
+
 
 export const acknowledgeNotif = (breach_name) => {
   return async function (dispatch) {
@@ -69,12 +79,16 @@ export const stopLoading = () => {
   return { type: "STOP_LOADING" }
 }
 
-const loadMonthlyAgg = (data) => {
+const loadMonthly = (aggData, detailData) => {
   return {
-    type: t.LOAD_MONTHLY_AGG,
-    payload: data
+    type: t.LOAD_MONTHLY_DATA,
+    payload: {
+      aggData,
+      detailData
+    }
   }
 }
+
 
 const loadRecent = (data) => {
   return {
