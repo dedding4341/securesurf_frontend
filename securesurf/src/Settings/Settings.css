@@ -3,3 +3,72 @@
   width: 100vw;
   height: 100vh;
 }
+
+.Settings-css {
+  display:flex;
+  justify-content: center;
+}
+
+.Settings-container {
+  display: flex;
+  margin-top: 10rem;
+  align-items: center;
+  justify-content: center;
+  background-color: #20202a;
+  border-radius: 10px;
+}
+
+.Settings-form-container {
+  position: fixed;
+  width: 10%;
+  min-width: 50rem;
+  top: 15%;
+  margin: auto;
+  border-radius: 10px;
+  padding: 1.5rem 3rem 3rem 3rem;
+  background-color: rgb(38, 38, 39);
+  text-align: right;
+}
+
+
+.Settings-form-container path {
+  color: rgb(250, 62, 62);
+}
+
+.Settings-show-form {
+  margin: 1.8rem 0 0 1.5rem;
+  border-radius: 10px;
+  padding: 1rem 2rem;
+}
+
+.Settings-form-container svg {
+  margin-bottom: 1rem;
+  cursor: pointer;
+}
+
+.Settings-form-container form {
+  display: flex;
+  flex-direction: column;
+}
+
+.Settings-form > input {
+  padding: 0.8rem 1.6rem;
+  margin-top: 0.5rem;
+}
+
+.Settings-form > p {
+  color: white;
+  font-size: 1.2rem;
+  text-align: left;
+}
+
+.Settings-form > button {
+  margin: auto;
+  margin-top: 2rem;
+  padding: 1rem 0rem;
+  width: 15rem;
+  border-radius: 10px;
+  font-size: 1.6rem;
+  color: rgb(5, 5, 5);
+  background-color: rgb(247, 247, 247);
+}

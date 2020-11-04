@@ -1,5 +1,5 @@
 .NavBar {
-  font-size: 2rem; 
+  font-size: 2rem;
 }
 
 .NavBar-container {
@@ -13,6 +13,10 @@
 
 .NavBar-item {
   margin: 2rem 4rem;
+}
+
+.NavBar-item > a {
+  color: black;
 }
 
 .NavBar-item > a:visited {

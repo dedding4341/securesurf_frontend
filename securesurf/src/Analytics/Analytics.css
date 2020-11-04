@@ -1,5 +1,79 @@
 .Analytics {
   background-color: rgb(10, 11, 24);
-  width: 100vw;
+  color: white;
   height: 100vh;
+  overflow: scroll;
+}
+
+.Analytics-filter > form > button {
+  background-color: rgb(97, 113, 255);
+  color: white;
+  font-size: 1.6rem;
+  padding: 0.5rem 1.5rem;
+  border-radius: 5px;
+  margin-left: 5px;
+}
+.Analytics-filter > form {
+  float: right;
+  margin-right: 2rem;
+  margin-left: 2rem;
+}
+
+.Analytics-filter > form > select {
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+.Analytics-bar-container h1 {
+  margin-bottom: 0.7rem;
+  margin-left: 2rem;
+  font-size: 3rem;
+}
+
+.Analytics-filter-tip {
+  margin-left: 2rem;
+  margin-bottom: 0.5rem;
+  color: rgb(141, 141, 141);
+}
+
+.Analytics-none {
+  color: rgb(153, 144, 144);
+  margin-right: 15%;
+}
+
+.Analytics-bar-container {
+  left: 15%;
+  top: 10%;
+  min-width: 70rem;
+  height: 30%;
+  min-height: 40rem;
+  width: 60%;
+  min-width: 50rem;
+  margin: auto;
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #343236;
+  padding-top: 5rem;
+  border-radius: 15px;
+}
+
+.tooltip {
+  background-color: rgba(68, 60, 77, 0.6);
+  padding: 1rem;
+  border-radius: 15px;
+  width: 20rem;
+  font-size: 1.3rem;
+  text-align: center;
+  word-wrap: break-word;
+}
+
+g text {
+  color: white;
+  font-size: 1.2rem;
+}
+
+.x g text {
+  display:none;
 }

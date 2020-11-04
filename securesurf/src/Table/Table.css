@@ -1,0 +1,28 @@
+.Table-table {
+  margin: auto;
+  width: 40vw;
+  min-width: 48rem;
+  color: rgb(212, 212, 212);
+  padding: 0 0.2rem;
+  text-align: center;
+}
+
+.Table {
+  display: flex;
+  font-size: 1.6rem;
+  margin-top: 2rem;
+}
+
+.Table-table th {
+  background-color: rgb(58, 58, 73);
+  border-radius: 5px;
+  padding: 0.8rem 0;
+}
+
+.Table-table-body > tr > td {
+  border-radius: 5px;
+  padding: 0.5rem 0;
+  word-wrap: break-word;
+  background-color: rgba(64, 60, 66, 0.493);
+  border-bottom: 1px solid #20202a;
+}

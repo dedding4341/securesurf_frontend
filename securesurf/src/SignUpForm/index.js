@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import "./SignUpForm.css";
+import { useHistory } from "react-router-dom";
 
 function SignUpForm({ handleSignUp }) {
   const INITIAL_VALUES = { user_email: "", password: "", password2: "", first_name: "", phone: "" }
   const [formData, setFormData] = useState(INITIAL_VALUES);
   const [errors, setErrors] = useState({ errors: {} });
-
+  const history = useHistory();
 
   const validate = () => {
     let errors = {};
@@ -58,8 +59,8 @@ function SignUpForm({ handleSignUp }) {
     if (validate()) {
       handleSignUp(formData)
       setFormData(INITIAL_VALUES);
-      console.log('Form is submited');
-      //start download
+      //redirect to install...  (github)
+      history.push("https://github.com/dedding4341/securesurf_frontend/tree/main/Extension");
     } else {
       console.log('validation failed', errors);
     }

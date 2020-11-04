@@ -1,3 +1,12 @@
+# SecureSurf Frontend
+Frontend libraries include:
+- D3 / react-d3-components
+- Redux, Thunk / react-redux, redux-thunk
+- react-router-dom
+- Axios
+- FontAwesome / react-fontawesome
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

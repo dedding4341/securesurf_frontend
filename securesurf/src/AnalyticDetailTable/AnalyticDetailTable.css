@@ -1,0 +1,27 @@
+.AnalyticDetailTable-table {
+  background-color: rgb(36, 35, 35);
+  margin: auto;
+  width: 60vw;
+  min-width: 48rem;
+  margin-top: 1%;
+  color: rgb(212, 212, 212);
+  padding: 0 0.2rem;
+  text-align: center;
+}
+
+.AnalyticDetailTable-table > tr > th {
+  background-color: rgb(16, 16, 20);
+  padding: 0.7rem;
+}
+
+.AnalyticDetailTable-table-body > tr > td {
+  border-bottom: 1px solid rgb(87, 87, 87);
+}
+
+
+.url {
+  max-width: 100px;
+  word-wrap: break-word;
+  text-align: left;
+  padding: 0.4rem;
+}
