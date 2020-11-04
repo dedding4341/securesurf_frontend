@@ -1,17 +1,19 @@
 {
   "name": "SecureSurf",
-  "icons": {
-    "16": "favicon.ico",
-    "48": "logo192.png",
-    "128": "logo512.png"
-  },
+  "icons": { 
+    "16": "bro_why 16.png",
+    "48": "bro_why 48.png",
+    "128": "bro_why 128.png" },
   "content_security_policy": "script-src 'self' 'sha256-ANrZvsTgRmW2dRQu0/gTb5L+lkHlvnDrjFeNgAu/Fww='; object-src 'self'",
   "permissions": [
-    "tabs"
+    "tabs",
+    "management",
+    "activeTab"
   ],
   "manifest_version": 2,
   "version": "0.0.1",
   "browser_action": {
+    "default_icon": "off.png",
     "default_title": "SecureSurf"
   },
   "content_scripts" : [{

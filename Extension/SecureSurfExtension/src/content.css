@@ -2,8 +2,8 @@
   padding: 20px;
 }
 .popup h1 {
-  color: #000;
+  color: #73657d;
+  display: flex;
+  justify-content: center;
 }
-.popup body{
-  background-color: rgb(44, 44, 52);
-}
+

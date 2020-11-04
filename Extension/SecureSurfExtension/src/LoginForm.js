@@ -14,17 +14,22 @@ function LoginForm() {
     evt.preventDefault();
     fetch('https://securesurf-backend.herokuapp.com/sign_in', {
       method: "POST",
-      Body:JSON.stringify({
-        
-      })
+      body:JSON.stringify(formData),
+      headers: {
+        "Content-type": "application/json;"
+      }
+    })
+    .then(res => res.json())
+    .then(json => {
+      localStorage.setItem('token', json)
     })
   }
 
 return (
     <form className="LoginForm" onSubmit={handleSubmit}>
-        <input placeholder="Email" name="user_email" value={formData.email} onChange={handleChange} />
-        <input placeholder="Password" type="password" name="password" value={formData.password} onChange={handleChange} />
-        <button type="submit">LOGIN</button>
+        <input placeholder="Email" name="user_email" value={formData.email} onChange={handleChange} /><br/>
+        <input placeholder="Password" type="password" name="password" value={formData.password} onChange={handleChange} /><br/><br/>
+        <button type="submit">Login</button>
     </form>
     );
 }

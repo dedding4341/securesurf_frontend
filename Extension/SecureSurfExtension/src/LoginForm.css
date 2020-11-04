@@ -1,0 +1,12 @@
+input {
+    border-radius: 13px;
+    border-width: 1px;
+    padding: 10px;
+    margin-left: 85px
+}
+button{
+    background-color: white;
+    border-radius: 6px;
+    margin-left: 140px;
+}
+

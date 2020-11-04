@@ -62,7 +62,7 @@ let website_url = document.URL;
 let testSiteUrl = 'https://securesurf-backend.herokuapp.com/url_analysis'
 
 const data = {
-  user_email: "email@email.com",
+  user_email: "email.@email.com",
   url: website_url
 }
 let tabStartTime = 0;
@@ -106,6 +106,7 @@ let endTime = () => {
   .then(res => res.json())
   .then(json => console.log(json))
 }
-
-window.addEventListener('load', grabUrl);
-window.addEventListener('beforeunload', endTime)
+if(localStorage.getItem('token') != null || localStorage.getItem('token') != undefined ) {
+  window.addEventListener('load', grabUrl);
+  window.addEventListener('beforeunload', endTime)
+}
